@@ -41,4 +41,4 @@ In order to kill the client or server, just Ctrl-C
 
 * **Arthur Giuliano** [darklink41](https://github.com/darklink41)
 
-Tested on Ubuntu 16.04.3
+Tested on Ubuntu 16.04.3 and macOS 10.12.6
