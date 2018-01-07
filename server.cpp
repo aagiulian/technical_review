@@ -6,7 +6,7 @@
 /*   By: agiulian <agiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 08:40:12 by agiulian          #+#    #+#             */
-/*   Updated: 2018/01/07 19:42:31 by agiulian         ###   ########.fr       */
+/*   Updated: 2018/01/07 19:59:24 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 const char *generate_random_gps_values()
 {
 	std::string	gps_sentence;
-	char	alt[10];
+	char		alt[10];
+	srand 		(time(NULL));
 	
 	sprintf(alt, "%.1lf", random()/(double)RAND_MAX * (0.0-1000.0) + 1000.0);
 	gps_sentence = ("$GPGGA,123519,4807.038,N,01131.000,E,");
