@@ -8,13 +8,15 @@ Project is compiled with C++11
 
 ### Installing
 
+Installation requires admin permission
+
 ```
 git clone https://github.com/darklink41/technical_review
 cd technical_review
 sh install.sh
 ```
 
-Now just run the client and the server
+Now just run the client and the server, if you used install.sh they're in the **build** directory
 ```
 ./server
 ./client
@@ -39,3 +41,4 @@ In order to kill the client or server, just Ctrl-C
 
 * **Arthur Giuliano** [darklink41](https://github.com/darklink41)
 
+Tested on Ubuntu 16.04.3

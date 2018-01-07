@@ -25,8 +25,12 @@ cd ../..
 git clone https://github.com/gabime/spdlog
 cd ..
 
+# Link librairies
+sudo ldconfig
+
 # Install Client and Server
 mkdir build
 cd build
 cmake ..
 make
+

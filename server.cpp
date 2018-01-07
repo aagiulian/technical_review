@@ -6,12 +6,13 @@
 /*   By: agiulian <agiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 08:40:12 by agiulian          #+#    #+#             */
-/*   Updated: 2018/01/07 18:02:46 by agiulian         ###   ########.fr       */
+/*   Updated: 2018/01/07 19:42:31 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <zmq.hpp>
 #include <unistd.h>
+#include <stdlib.h>
 #include <iostream>
 
 // Some fix quality and altitude random value generator
@@ -26,7 +27,7 @@ const char *generate_random_gps_values()
 	gps_sentence += "3,08,0.9,";
 	gps_sentence += alt;
 	gps_sentence += ",M,46.9,M,,*47";
-	return ((gps_sentence.c_str()));
+	return (strdup(gps_sentence.c_str()));
 }
 
 // Starts publisher and sends gps sentence in an infinite loop
@@ -46,6 +47,7 @@ int main ()
 		std::cout << "Message sent : " << gps_data << std::endl;
 		snprintf ((char *) message.data(), strlen(gps_data) + 1, "%s", gps_data); 
 		publisher.send(message);
+		free((void*)gps_data);
 		usleep(1000000);
 	}
 	return 0;
