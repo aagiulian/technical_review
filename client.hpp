@@ -6,7 +6,7 @@
 #include <sstream>
 #include <cstdlib>
 #include <thread>
-#include "spdlog/include/spdlog/spdlog.h"
+#include "spdlog/spdlog.h"
 
 #define SERVER		"tcp://localhost:5653"  // Sets the server address
 #define LOG_FILE 	"log.txt" 				// Sets log file location

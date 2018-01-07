@@ -45,7 +45,9 @@ Now it's time to install the project
 git clone https://github.com/darklink41/technical_review
 cd technical_review
 cp -R [spdlog's directory]/include/spdlog .
-cmake .
+mkdir build
+cd build
+cmake ..
 make
 ```
 
