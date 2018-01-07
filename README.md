@@ -1,12 +1,14 @@
 # Bilberry Technical Review 
 
 A TCP server that sends GPS NMEA GGA sentences every seconds.
+
 A TCP client that connects to the GPS server and logs its fix quality and altitude in a file.
 
 
 ## Getting Started
 
 These insctructions will get you a copy of the project up and running on your local machine.
+
 See Options for notes on options.
 
 ### Prerequisites
@@ -57,7 +59,9 @@ Now just run the client and the server
 ## Options 
 
 Server port should be modified server.cpp for server and in client.hpp for client
+
 In client.hpp you can set the emplacement of the logfile as well as the logging format (see https://github.com/gabime/spdlog/wiki/3.-Custom-formatting for custom formatting)
+
 In order to kill the client or server, just Ctrl-C
 
 
