@@ -7,7 +7,7 @@ A TCP client that connects to the GPS server and logs its fix quality and altitu
 
 ## Getting Started
 
-These insctructions will get you a copy of the project up and running on your local machine.
+These instructions will get you a copy of the project up and running on your local machine.
 
 See Options for notes on options.
 
