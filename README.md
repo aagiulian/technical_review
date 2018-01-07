@@ -4,6 +4,8 @@ A TCP server that sends GPS NMEA GGA sentences every seconds.
 
 A TCP client that connects to the GPS server and logs its fix quality and altitude in a file.
 
+Project is compiled with C++11
+
 
 ## Getting Started
 
