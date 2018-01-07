@@ -6,7 +6,7 @@
 /*   By: agiulian <agiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 18:52:40 by agiulian          #+#    #+#             */
-/*   Updated: 2018/01/07 16:54:52 by agiulian         ###   ########.fr       */
+/*   Updated: 2018/01/07 18:06:13 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,9 @@ char	*GpsSentence::altitude() const
 // Logs Fix quality and altitude with Spd logger
 void	GpsSentence::log(char *logger) const
 {
-	spdlog::get(logger)->info("Fix quality : {} / Altitude : {} meters", fix_quality(), altitude());
+	char	*alt;
+
+	alt = altitude();
+	spdlog::get(logger)->info("Fix quality : {} / Altitude : {} meters", fix_quality(), alt);
+	free(alt);
 }

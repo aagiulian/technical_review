@@ -6,7 +6,7 @@
 /*   By: agiulian <agiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 08:40:12 by agiulian          #+#    #+#             */
-/*   Updated: 2018/01/07 17:05:07 by agiulian         ###   ########.fr       */
+/*   Updated: 2018/01/07 18:02:46 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int main ()
 
 		gps_data = generate_random_gps_values();
 		zmq::message_t message(strlen(gps_data) + 1);
+		std::cout << "Message sent : " << gps_data << std::endl;
 		snprintf ((char *) message.data(), strlen(gps_data) + 1, "%s", gps_data); 
 		publisher.send(message);
 		usleep(1000000);

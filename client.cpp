@@ -6,7 +6,7 @@
 /*   By: agiulian <agiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 08:56:12 by agiulian          #+#    #+#             */
-/*   Updated: 2018/01/07 17:05:39 by agiulian         ###   ########.fr       */
+/*   Updated: 2018/01/07 17:59:02 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,16 @@ int main ()
 	zmq::socket_t	subscriber (context, ZMQ_SUB);
 	zmq::message_t	message;
 
-	init_logger();
 	subscriber.connect(SERVER);
 	subscriber.setsockopt(ZMQ_SUBSCRIBE, filter, strlen (filter));
 	std::cout << "Client launched.." << std::endl;
+	init_logger();
+	std::cout << "Logging to " << LOG_FILE << std::endl;
 	while (true)
 	{	
 		subscriber.recv(&message);
 		GpsSentence	data((char*)message.data());
+		std::cout << "Message received : " << (char*)message.data() << std::endl;
 		std::thread t1(log_info, data);	
 		t1.join();
 	}
