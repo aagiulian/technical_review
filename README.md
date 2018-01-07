@@ -1,4 +1,4 @@
-# Bilberry Technical Review 
+# Bilberry Technical Exercise 
 
 A TCP server that sends GPS NMEA GGA sentences every seconds.
 
