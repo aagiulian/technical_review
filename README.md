@@ -24,7 +24,7 @@ Now just run the client and the server, if you used install.sh they're in the **
 
 ## Options 
 
-Server port should be modified server.cpp for server and in client.hpp for client
+Server port should be modified in server.cpp for server and in client.hpp for the client
 
 In client.hpp you can set the emplacement of the logfile as well as the logging format (see https://github.com/gabime/spdlog/wiki/3.-Custom-formatting for custom formatting)
 
